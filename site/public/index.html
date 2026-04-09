@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabriel Marques | Portfolio</title>
+<meta content="Expert Developer crafting digital products that shape meaningful experiences." name="description"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter and a High-End Serif (Playfair Display used for editorial feel) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#22C55E',
+            dark: '#0A0A0A',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Space Grotesk', 'sans-serif'],
+          },
+          borderRadius: {
+            'eight': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="typography">
+    .text-outline {
+      -webkit-text-stroke: 2px white;
+      color: transparent;
+      font-weight: 900;
+    }
+    .text-outline-dark {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      color: transparent;
+    }
+    .serif-display {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 0.85;
+    }
+  </style>
+<style data-purpose="layout-animations">
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+    }
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #22C55E;
+      transform-origin: bottom right;
+      transition: transform 0.4s ease-out;
+    }
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+<!-- BEGIN: Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-8 mix-blend-difference">
+<div class="text-xl font-bold tracking-tighter"><a href="index.html">GABRIEL MARQUES</a></div>
+<div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
+<a class="hover:text-brand transition-colors" href="projects.html">Projetos</a>
+<a class="hover:text-brand transition-colors" href="about.html">Sobre</a>
+<a class="hover:text-brand transition-colors" href="skills.html">Serviços</a>
+<a class="hover:text-brand transition-colors" href="contact.html">Contato</a>
+</div>
+<div class="text-sm">DIGA OI — GABRIEL MARQUES</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<section class="relative min-height-[100vh] bg-brand pt-32 pb-20 md:py-0 md:h-screen flex items-center overflow-hidden" data-purpose="hero-section" id="hero">
+<div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 items-center relative z-10">
+<!-- Left: B&W Image -->
+<div class="md:col-span-5 order-2 md:order-1 relative mt-12 md:mt-0">
+<div class="aspect-[4/5] bg-gray-200 grayscale overflow-hidden rounded-eight shadow-2xl">
+<img alt="Gabriel Marques Portrait" class="w-full h-full object-cover" src="../../img/Perfil.jpeg"/>
+</div>
+</div>
+<!-- Right: Giant Text & Subtitle -->
+<div class="md:col-span-7 order-1 md:order-2 md:pl-12 flex flex-col justify-center">
+<h1 class="serif-display text-[15vw] md:text-[12vw] uppercase leading-none mb-8 font-bold">
+          GABRIEL<br/>
+<span class="text-outline font-black">MARQUES</span>
+</h1>
+<div class="max-w-md">
+<p class="text-xl md:text-2xl font-light mb-8 leading-relaxed">Desenvolvendo produtos digitais que moldam experiências significativas.</p>
+<a class="inline-flex items-center gap-4 bg-dark text-white px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform" href="projects.html">
+            Ver Meu Trabalho 
+            <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<main>
+<!-- BEGIN: Statement Section -->
+<section class="py-32 md:py-48 bg-dark" data-purpose="brand-statement">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-8">
+<h2 class="serif-display text-5xl md:text-8xl uppercase reveal-on-scroll font-bold">
+              Criando soluções <br/>
+              que <span class="text-brand italic">conectam</span> pessoas
+            </h2>
+<p class="mt-12 text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed reveal-on-scroll">
+              Eu sou Gabriel Alex Marques, estudante da UFC, Desenvolvedor Full Stack com 2+ anos de experiência e Medalhista de Ouro no Geração Tech (1º lugar de 1.700). Transformo desafios e lógicas complexas em sistemas digitais inovadores, como ERPs e soluções para ONGs.
+            </p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="p-2 border-2 border-brand rounded-eight w-48 md:w-64 rotate-3 reveal-on-scroll">
+<img alt="Gabriel Marques Portrait" class="rounded-eight" src="../../img/Perfil.jpeg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Statement Section -->
+<!-- BEGIN: Stats Section -->
+<section class="pb-32 md:pb-48 bg-dark" data-purpose="statistics">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h3 class="text-3xl md:text-4xl serif-display mb-6 font-bold">Construindo com propósito.<br/>Criando sistemas digitais escaláveis.</h3>
+<p class="text-gray-500 max-w-sm">Performance e confiabilidade estão no cerne de cada linha de código que escrevo.</p>
+</div>
+<div class="grid grid-cols-2 gap-y-12 md:gap-y-20 border-l border-gray-800 pl-12">
+<div>
+<span class="block text-5xl md:text-7xl font-serif text-brand font-bold mb-2">50+</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Projetos Entregues</span>
+</div>
+<div>
+<span class="block text-5xl md:text-7xl font-serif text-brand font-bold mb-2">2+</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Anos de Experiência</span>
+</div>
+<div>
+<span class="block text-5xl md:text-7xl font-serif text-brand font-bold mb-2">2400+</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Horas de Programação</span>
+</div>
+<div>
+<span class="block text-5xl md:text-7xl font-serif text-brand font-bold mb-2">10+</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Tecnologias Utilizadas</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Stats Section -->
+<!-- BEGIN: Expertise Section -->
+<section class="py-32 md:py-48 bg-dark border-t border-gray-900" data-purpose="expertise" id="expertise">
+<div class="container mx-auto px-6">
+<div class="mb-20">
+<h2 class="serif-display text-4xl md:text-7xl uppercase reveal-on-scroll font-bold">
+            Expertise técnica <br/>
+            para construir produtos de <span class="text-brand">impacto</span>
+</h2>
+</div>
+<div class="space-y-0">
+<!-- Item 01 -->
+<div class="group border-t border-gray-800 py-12 flex flex-col md:flex-row items-center gap-12 reveal-on-scroll">
+<div class="text-[8rem] md:text-[12rem] font-serif leading-none opacity-20 group-hover:opacity-100 group-hover:text-brand transition-all duration-500">01</div>
+<div class="flex-grow">
+<h4 class="text-3xl md:text-5xl uppercase font-serif mb-4">Desenvolvimento Frontend</h4>
+<p class="text-gray-400 max-w-xl">Criando interfaces de usuário responsivas e altamente interativas usando frameworks modernos como React e Vue.</p>
+</div>
+
+</div>
+<!-- Item 02 -->
+<div class="group border-t border-gray-800 py-12 flex flex-col md:flex-row items-center gap-12 reveal-on-scroll">
+<div class="text-[8rem] md:text-[12rem] font-serif leading-none opacity-20 group-hover:opacity-100 group-hover:text-brand transition-all duration-500">02</div>
+<div class="flex-grow">
+<h4 class="text-3xl md:text-5xl uppercase font-serif mb-4">Arquitetura de Backend</h4>
+<p class="text-gray-400 max-w-xl">Projetando sistemas robustos e escaláveis no lado do servidor, bancos de dados e microsserviços para aplicações de alto tráfego.</p>
+</div>
+
+</div>
+<!-- Item 03 -->
+<div class="group border-t border-gray-800 py-12 flex flex-col md:flex-row items-center gap-12 reveal-on-scroll">
+<div class="text-[8rem] md:text-[12rem] font-serif leading-none opacity-20 group-hover:opacity-100 group-hover:text-brand transition-all duration-500">03</div>
+<div class="flex-grow">
+<h4 class="text-3xl md:text-5xl uppercase font-serif mb-4">API &amp; Integração de Sistemas</h4>
+<p class="text-gray-400 max-w-xl">Conectando serviços de terceiros e sistemas internos de forma fluida para criar ecossistemas digitais unificados e poderosos.</p>
+</div>
+
+</div>
+<!-- Item 04 -->
+<div class="group border-y border-gray-800 py-12 flex flex-col md:flex-row items-center gap-12 reveal-on-scroll">
+<div class="text-[8rem] md:text-[12rem] font-serif leading-none opacity-20 group-hover:opacity-100 group-hover:text-brand transition-all duration-500">04</div>
+<div class="flex-grow">
+<h4 class="text-3xl md:text-5xl uppercase font-serif mb-4">Performance &amp; Otimização</h4>
+<p class="text-gray-400 max-w-xl">Otimizando tempos de carregamento, performance de renderização e tempos de resposta do servidor para garantir a melhor satisfação do usuário.</p>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- END: Expertise Section -->
+<!-- BEGIN: Projects Section -->
+<section class="py-32 md:py-48 bg-dark" data-purpose="work-portfolio" id="projects">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-8">
+<h2 class="serif-display text-4xl md:text-7xl uppercase mb-16 reveal-on-scroll font-bold">
+              Exibindo projetos <br/>
+              que definem minha <span class="text-brand italic">abordagem</span>
+</h2>
+<a href="https://gabrielalexs2.github.io/PDF-Studio/" target="_blank" class="block group cursor-pointer overflow-hidden rounded-eight reveal-on-scroll">
+<img alt="PDF-Studio" class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" src="../../img/PDFSTUDIO.png"/>
+<div class="mt-8 flex justify-between items-end">
+<div>
+<h3 class="text-4xl font-serif uppercase hover-underline-animation">PDF-Studio</h3>
+<p class="text-gray-500 mt-2 uppercase tracking-widest text-xs content-center pt-2">Web App • Edição de PDFs</p>
+</div>
+<div class="p-4 rounded-full border border-gray-700 group-hover:bg-brand group-hover:border-brand transition-colors">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+</div>
+</div>
+</a>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-end">
+<ul class="space-y-12 mb-16">
+<li class="reveal-on-scroll">
+<a class="group block" target="_blank" href="https://gabrielalexs2.github.io/PDF-Studio/">
+<span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Web App • Edição de PDFs</span>
+<span class="text-3xl font-serif uppercase hover-underline-animation">PDF-Studio</span>
+</a>
+</li>
+<li class="reveal-on-scroll">
+<a class="group block" target="_blank" href="https://gabrielalexs2.github.io/Sorteio/">
+<span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Web App • Sorteio Aleatório</span>
+<span class="text-3xl font-serif uppercase hover-underline-animation">Sorteador</span>
+</a>
+</li>
+<li class="reveal-on-scroll">
+<a class="group block" target="_blank" href="https://pirambuweb.netlify.app/">
+<span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Site Institucional • ONG</span>
+<span class="text-3xl font-serif uppercase hover-underline-animation">Pirambu Innovation</span>
+</a>
+</li>
+</ul>
+<a class="inline-flex items-center gap-4 bg-brand text-white px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform reveal-on-scroll" href="projects.html">
+              Ver Todos os Projetos
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Projects Section -->
+<!-- BEGIN: Testimonials Section -->
+<section class="py-32 md:py-48 bg-dark relative overflow-hidden" data-purpose="testimonials">
+<div class="container mx-auto px-6 relative z-10">
+<h2 class="serif-display text-5xl md:text-[10vw] uppercase text-center mb-32 reveal-on-scroll font-bold">
+          Histórias de <br/> <span class="text-outline">clientes</span>
+</h2>
+<div class="max-w-4xl mx-auto">
+<div class="bg-brand p-12 md:p-20 rounded-eight relative reveal-on-scroll">
+<svg class="absolute -top-10 -left-10 text-brand opacity-20 w-32 h-32" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14H17.017C14.2556 14 12.017 11.7614 12.017 9V5C12.017 3.89543 12.9124 3 14.017 3H21.017C22.1216 3 23.017 3.89543 23.017 5V12C23.017 14.7614 20.7784 17 18.017 17H17.017V19C17.017 20.1046 16.1216 21 15.017 21H14.017Z"></path><path d="M2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697V14H5.01697C2.25555 14 0.0169678 11.7614 0.0169678 9V5C0.0169678 3.89543 0.912398 3 2.01697 3H9.01697C10.1215 3 11.017 3.89543 11.017 5V12C11.017 14.7614 8.77839 17 6.01697 17H5.01697V19C5.01697 20.1046 4.12154 21 3.01697 21H2.01697Z"></path></svg>
+<p class="text-2xl md:text-4xl font-serif italic mb-8 leading-snug">
+              "Colaborar com o Gabriel foi uma experiência inspiradora. Ele rapidamente captou nossa visão, fez as perguntas certas e entregou um design que equilibra perfeitamente estética e funcionalidade."
+            </p>
+<div>
+<p class="text-xl font-bold">Mauro</p>
+<p class="text-sm uppercase tracking-widest text-white/70">Presidente da ONG Pirambu Innovation</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Random Background Images to match inspiration -->
+<div class="absolute top-10 right-10 w-24 h-24 rounded-full overflow-hidden opacity-30 grayscale hidden lg:block">
+<img alt="Client Thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyhv0pDAyYVmBajAksLb7YxbFGadL6XaVV_XiSXplc58CEkgKPll6iGH8zRQLAkkPqTDYUuR1L8oPorTDOxaWlUI-E1cbteAXzk0-AeDXQtB22szKiB9wz3cupO-sD_mWtFT86QitkVGEAAVrYHXcKpHBpnUmq9FfEVXdqDjTBGxkvViHZBKZTKZlkoPnPutN4wzdIvmQJCeB1ft3wJmiChwuycqZpnTVEdhEplHidgb9NjqwNwCyU_4Er3KbEswCmPc6rMvXI0jpw"/>
+</div>
+<div class="absolute bottom-20 left-20 w-32 h-40 rounded-eight overflow-hidden opacity-20 grayscale hidden lg:block rotate-12">
+<img alt="Client Thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDHBY5EOJa4HBVHhSIc7dHFteQBlQ1IZ53vY5vNlymRmHLN7JWoFKpAj6tlZiy13j9QH0m498JAbAJI61MHWyqPhcXx4L_RvwOIQvYfTUINVCHHbGTwq0uBs30kAkOUVy6eezipN3CLlOQS4MZCe4Ftad6FFwGdmhJw4ypFHtkn-jtZdGMRbe1mKwBi8NgvSJQ1QgiHNQMLC8pYi_Jtre60jGRM1PgabXMcVRJFj9Q6DMDRwZKG4rqykVtrdsYSC4ifG1ZkPX_hGKj"/>
+</div>
+</section>
+<!-- END: Testimonials Section -->
+<!-- BEGIN: CTA Section -->
+<section class="py-32 md:py-64 bg-dark text-center" data-purpose="call-to-action">
+<div class="container mx-auto px-6">
+<h2 class="serif-display text-5xl md:text-8xl uppercase mb-12 reveal-on-scroll font-bold">
+          Vamos construir algo <br/> extraordinário juntos
+        </h2>
+<a class="inline-flex items-center gap-4 bg-brand text-white px-12 py-6 rounded-full text-2xl font-medium hover:scale-110 transition-transform reveal-on-scroll" href="contact.html">
+          Trabalhe comigo
+          <svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</section>
+<!-- END: CTA Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-brand pt-32 pb-12 relative overflow-hidden" data-purpose="footer" id="contact">
+<!-- Huge Outline Text in BG -->
+<div class="absolute bottom-0 left-0 w-full pointer-events-none select-none z-0 overflow-hidden">
+<div class="animate-marquee">
+<h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+<h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+</div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 border-b border-white/20 pb-20">
+<div>
+<p class="text-sm uppercase tracking-[0.2em] mb-8 font-semibold">Conecte-se comigo</p>
+<div class="flex gap-6">
+<a class="hover:opacity-70 transition-opacity" href="https://www.linkedin.com/in/gabriel-alex-rodrigues-marques-438351335" target="_blank">LinkedIn</a>
+<a class="hover:opacity-70 transition-opacity" href="https://github.com/GabrielAlexS2" target="_blank">GitHub</a>
+<a class="hover:opacity-70 transition-opacity" href="https://www.instagram.com/gabs_alex11/" target="_blank">Instagram</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-12 text-sm uppercase tracking-widest font-bold">
+<a class="hover:text-dark transition-colors" href="about.html">Sobre</a>
+<a class="hover:text-dark transition-colors" href="skills.html">Serviços</a>
+<a class="hover:text-dark transition-colors" href="projects.html">Projetos</a>
+<a class="hover:text-dark transition-colors" href="contact.html">Contato</a>
+</div>
+</div>
+<div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm font-light text-white/80 italic">Eu transformo ideias inovadoras em realidade através de design atencioso e código significativo.</p>
+<p class="text-sm font-medium tracking-tight">Copyright © Gabriel Marques 2026</p>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<script data-purpose="scroll-animations">
+    // Simple intersection observer for scroll reveals
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body></html>
+

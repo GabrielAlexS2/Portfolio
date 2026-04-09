@@ -1,0 +1,226 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabriel Marques | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#22C55E',
+            dark: '#0A0A0A',
+            primary: '#22C55E',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Space Grotesk', 'sans-serif'],
+          },
+          borderRadius: {
+            'eight': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+        .text-outline {
+            -webkit-text-stroke: 2px white;
+            color: transparent;
+            font-weight: 900;
+        }
+        .serif-display {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 0.85;
+        }
+        .animate-marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+    <!-- BEGIN: Navigation -->
+    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-8 mix-blend-difference">
+        <div class="text-xl font-bold tracking-tighter"><a href="index.html">GABRIEL MARQUES</a></div>
+        <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
+            <a class="hover:text-brand transition-colors" href="projects.html">Projetos</a>
+            <a class="hover:text-brand transition-colors" href="about.html">Sobre</a>
+            <a class="hover:text-brand transition-colors" href="skills.html">Serviços</a>
+            <a class="hover:text-brand transition-colors" href="contact.html">Contato</a>
+        </div>
+        <div class="text-sm">DIGA OI — GABRIEL MARQUES</div>
+    </nav>
+    <!-- END: Navigation -->
+
+    <main class="relative">
+        <!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 pt-24 pb-20 border-b border-white/5 text-center">
+                <span class="text-primary font-display font-bold text-xs uppercase tracking-[0.3em] mb-6 block">Especialista Digital</span>
+                <h1 class="font-display font-bold text-5xl sm:text-8xl leading-[1.1] tracking-tight mb-8 uppercase">
+                    Habilidades &amp; <br/>
+                    <span class="text-white/20">Experiência</span>
+                </h1>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Focado em criar soluções digitais de alto impacto através de aprendizado contínuo, design minimalista e código performático.
+                </p>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="px-6 py-24 max-w-7xl mx-auto space-y-20">
+            <!-- Group 1 -->
+            <div class="text-center">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="h-px flex-1 bg-white/5"></span>
+                    <h3 class="font-display text-sm uppercase tracking-widest text-slate-500">Linguagens &amp; Frameworks</h3>
+                    <span class="h-px flex-1 bg-white/5"></span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="tech-tag px-6 py-3 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium transition-all duration-500 cursor-default">React.js</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">TypeScript</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Next.js</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Node.js</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Tailwind CSS</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Python</span>
+                </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="text-center">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="h-px flex-1 bg-white/5"></span>
+                    <h3 class="font-display text-sm uppercase tracking-widest text-slate-500">Ferramentas &amp; Workflow</h3>
+                    <span class="h-px flex-1 bg-white/5"></span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Docker</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Git / GitHub</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium transition-all duration-500 cursor-default">Figma</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">AWS</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">PostgreSQL</span>
+                    <span class="tech-tag px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 text-sm font-medium transition-all duration-500 cursor-default">Agile/Scrum</span>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function animateTechStack() {
+                const tags = document.querySelectorAll('.tech-tag');
+                const activeClasses = ['border-primary/30', 'bg-primary/5', 'text-primary'];
+                const inactiveClasses = ['border-white/10', 'bg-white/5', 'text-slate-300'];
+
+                setInterval(() => {
+                    tags.forEach(tag => {
+                        tag.classList.remove(...activeClasses);
+                        tag.classList.add(...inactiveClasses);
+                    });
+
+                    const count = Math.floor(Math.random() * 1) + 2; // 2 to 3 active items
+                    const shuffled = Array.from(tags).sort(() => 0.5 - Math.random());
+                    shuffled.slice(0, count).forEach(tag => {
+                        tag.classList.remove(...inactiveClasses);
+                        tag.classList.add(...activeClasses);
+                    });
+                }, 1500);
+            }
+            document.addEventListener('DOMContentLoaded', animateTechStack);
+        </script>
+
+        <!-- Experience Timeline -->
+        <section class="max-w-7xl mx-auto px-6 py-24 bg-neutral-900/50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-display text-4xl font-bold mb-16 uppercase tracking-tight text-center">Trajetória Profissional</h2>
+                <div class="space-y-0">
+                    <!-- Entry 1 -->
+                    <div class="group relative pl-12 pb-16 border-l border-white/10">
+                        <div class="absolute -left-[5px] top-0 size-2.5 rounded-full bg-primary ring-4 ring-primary/20"></div>
+                        <span class="text-primary font-display font-bold text-sm mb-2 block">2026 — Presente</span>
+                        <h4 class="text-2xl font-display font-bold text-white mb-1 uppercase tracking-wide">Desenvolvedor Full Stack &amp; Freelancer</h4>
+                        <p class="text-slate-400 text-sm font-medium mb-6 uppercase tracking-tighter">Projetos Independentes &amp; Clientes</p>
+                        <p class="text-slate-500 text-base leading-relaxed">
+                            Atuação no desenvolvimento de sistemas web completos, incluindo ERPs, e-commerces e aplicações personalizadas. Experiência desde o levantamento de requisitos até a entrega final, utilizando tecnologias modernas como React, Node.js e bancos de dados relacionais. Desenvolvimento de soluções sob medida para clientes, com foco em performance, escalabilidade e experiência do usuário.
+                        </p>
+                    </div>
+                    <!-- Entry 2 -->
+                    <div class="group relative pl-12 pb-16 border-l border-white/10">
+                        <div class="absolute -left-[5px] top-0 size-2.5 rounded-full bg-white/20 group-hover:bg-primary transition-colors"></div>
+                        <span class="text-slate-500 font-display font-bold text-sm mb-2 block">2025</span>
+                        <h4 class="text-2xl font-display font-bold text-white mb-1 uppercase tracking-wide">Desenvolvedor Iniciante &amp; ONGs</h4>
+                        <p class="text-slate-400 text-sm font-medium mb-6 uppercase tracking-tighter">Foco em Desenvolvimento Web e Impacto Social</p>
+                        <p class="text-slate-500 text-base leading-relaxed">
+                            Início da trajetória na programação com foco em desenvolvimento web. Criação de projetos práticos voltados para ONGs, contribuindo com soluções digitais e impacto social. Aprendizado sólido em HTML, CSS, JavaScript e fundamentos de desenvolvimento.
+                        </p>
+                    </div>
+                    <!-- Entry 3 -->
+                    <div class="group relative pl-12 pb-16 border-l border-white/10">
+                        <div class="absolute -left-[5px] top-0 size-2.5 rounded-full bg-white/20 group-hover:bg-yellow-400 transition-colors"></div>
+                        <span class="text-slate-500 font-display font-bold text-sm mb-2 block">2025</span>
+                        <h4 class="text-2xl font-display font-bold text-yellow-500 mb-1 uppercase tracking-wide">1º Lugar — Geração Tech (Medalha de Ouro)</h4>
+                        <p class="text-slate-400 text-sm font-medium mb-6 uppercase tracking-tighter">Programa Estadual de Capacitação Tecnológica</p>
+                        <p class="text-slate-500 text-base leading-relaxed">
+                            Destaque entre aproximadamente 1.700 participantes de todo o Ceará. Desenvolvimento de projeto de alto nível técnico avaliado por especialistas, com apresentação em evento transmitido ao vivo. Reconhecimento pela excelência em lógica, desenvolvimento e resolução de problemas reais.
+                        </p>
+                    </div>
+                    <!-- Entry 4 -->
+                    <div class="group relative pl-12 pb-16 border-l border-white/10">
+                        <div class="absolute -left-[5px] top-0 size-2.5 rounded-full bg-white/20 group-hover:bg-primary transition-colors"></div>
+                        <span class="text-slate-500 font-display font-bold text-sm mb-2 block">2024</span>
+                        <h4 class="text-2xl font-display font-bold text-white mb-1 uppercase tracking-wide">Líder de Projetos &amp; Desenvolvedor</h4>
+                        <p class="text-slate-400 text-sm font-medium mb-6 uppercase tracking-tighter">Projetos Acadêmicos e Colaborativos</p>
+                        <p class="text-slate-500 text-base leading-relaxed">
+                            Liderança técnica em projetos em equipe, organizando tarefas, definindo arquitetura e garantindo entregas dentro do prazo. Participação ativa no desenvolvimento de sistemas completos, com integração de APIs, autenticação de usuários e interfaces modernas. Experiência prática com metodologias ágeis e trabalho colaborativo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Marquee -->
+<!-- BEGIN: Footer -->
+<footer class="bg-brand pt-32 pb-12 relative overflow-hidden" data-purpose="footer" id="contact">
+<!-- Huge Outline Text in BG -->
+<div class="absolute bottom-0 left-0 w-full pointer-events-none select-none z-0 overflow-hidden">
+<div class="animate-marquee">
+<h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+<h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+</div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 border-b border-white/20 pb-20">
+<div>
+<p class="text-sm uppercase tracking-[0.2em] mb-8 font-semibold">Conecte-se comigo</p>
+<div class="flex gap-6">
+<a class="hover:opacity-70 transition-opacity" href="https://www.linkedin.com/in/gabriel-alex-rodrigues-marques-438351335" target="_blank">LinkedIn</a>
+<a class="hover:opacity-70 transition-opacity" href="https://github.com/GabrielAlexS2" target="_blank">GitHub</a>
+<a class="hover:opacity-70 transition-opacity" href="https://www.instagram.com/gabs_alex11/" target="_blank">Instagram</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-12 text-sm uppercase tracking-widest font-bold">
+<a class="hover:text-dark transition-colors" href="about.html">Sobre</a>
+<a class="hover:text-dark transition-colors" href="skills.html">Serviços</a>
+<a class="hover:text-dark transition-colors" href="projects.html">Projetos</a>
+<a class="hover:text-dark transition-colors" href="contact.html">Contato</a>
+</div>
+</div>
+<div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm font-light text-white/80 italic">Eu transformo ideias inovadoras em realidade através de design atencioso e código significativo.</p>
+<p class="text-sm font-medium tracking-tight">Copyright © Gabriel Marques 2026</p>
+</div>
+</div>
+</footer>
+</body></html>
