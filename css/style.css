@@ -1,0 +1,81 @@
+/* Tipografia e Estilos Globais */
+.text-outline {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  font-weight: 900;
+}
+
+.text-outline-dark {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.serif-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+}
+
+/* Animações de Revelação no Scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação de Underline no Hover */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #22C55E;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Marquee (Texto Corrediço) */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+/* Ajustes de Layout */
+body {
+  min-height: max(884px, 100dvh);
+}
+
+/* Efeito Grayscale (Preto e Branco) com hover colorido */
+.grayscale-img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.grayscale-img:hover {
+    filter: grayscale(0%);
+}
