@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gabriel Marques | Certificado - Conclusão Full Stack</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: { brand: '#22C55E', dark: '#0A0A0A' },
+              fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Space Grotesk', 'sans-serif'] },
+              borderRadius: { 'eight': '8px' }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+
+<!-- BOTÃO VOLTAR -->
+<a href="certificates.html" class="fixed top-8 left-6 md:left-12 z-[70] bg-brand text-black p-3 rounded-full hover:scale-110 transition-transform shadow-2xl flex items-center justify-center group">
+    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-bold uppercase text-xs">Voltar</span>
+</a>
+
+<!-- NAVEGAÇÃO -->
+<nav class="fixed top-0 w-full z-50 flex justify-end items-center px-6 md:px-12 py-8 mix-blend-difference">
+    <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium relative z-[60]">
+        <a class="hover:text-brand transition-colors" href="index.html">Início</a>
+        <a class="hover:text-brand transition-colors" href="projects.html">Projetos</a>
+        <a class="hover:text-brand transition-colors" href="about.html">Sobre</a>
+        <a class="hover:text-brand transition-colors" href="skills.html">Serviços</a>
+        <a class="hover:text-brand transition-colors" href="certificates.html">Certificados</a>
+        <a class="hover:text-brand transition-colors" href="contact.html">Contato</a>
+    </div>
+</nav>
+
+<main class="min-h-screen pt-32 pb-24">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <div class="mb-12">
+            <span class="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Formação Profissional • Geração Tech</span>
+            <h1 class="serif-display text-4xl md:text-6xl uppercase mb-6 font-bold">Conclusão Full Stack</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-gray-400 uppercase tracking-widest">
+                <span class="px-3 py-1 border border-gray-800 rounded-full">Carga Horária: 192h</span>
+                <span class="px-3 py-1 border border-gray-800 rounded-full">Status: Concluído</span>
+            </div>
+        </div>
+
+        <div class="bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden mb-12 shadow-2xl">
+            <img src="img/certi1.png" alt="Certificado Conclusão Full Stack" class="w-full h-auto">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 space-y-8 text-gray-300 leading-relaxed text-lg">
+                <p>Certificado oficial de conclusão da formação de **Desenvolvedor Full Stack** pelo programa **Geração Tech**. Este curso foi fundamental para consolidar meus conhecimentos em todo o ciclo de vida de desenvolvimento de software.</p>
+                <p>O programa focou em preparar talentos para o mercado de tecnologia do Ceará, abordando desde lógica de programação avançada até a implementação de sistemas complexos com comunicação em tempo real e integração de APIs.</p>
+                <h3 class="text-white font-serif text-2xl uppercase mt-12 mb-4">Principais Áreas:</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Desenvolvimento de SPAs (Single Page Applications).</li>
+                    <li>Criação de APIs RESTful seguras.</li>
+                    <li>Modelagem e normalização de dados.</li>
+                    <li>Práticas de Clean Code e arquitetura MVC.</li>
+                </ul>
+            </div>
+            <div class="space-y-8">
+                <div class="p-6 bg-brand/5 border border-brand/20 rounded-eight">
+                    <h4 class="text-brand font-bold uppercase text-xs tracking-widest mb-4">Instituição</h4>
+                    <p class="text-white font-medium">IEL / FIEC / ADECE</p>
+                    <p class="text-sm text-gray-500 mt-2">Governo do Estado do Ceará</p>
+                </div>
+                <div class="p-6 bg-neutral-900 border border-gray-800 rounded-eight">
+                    <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-4">Data</h4>
+                    <p class="text-white font-medium">Agosto de 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="bg-dark pt-20 pb-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm font-light text-white/80 italic">Gabriel Marques Portfólio 2026</p>
+                <div class="flex gap-6 text-xs uppercase tracking-widest font-bold">
+                    <a class="hover:text-brand transition-colors" href="index.html">Início</a>
+                    <a class="hover:text-brand transition-colors" href="certificates.html">Certificados</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gabriel Marques | Portfolio — Certificados</title>
+    <meta content="Certificações e conquistas acadêmicas de Gabriel Marques." name="description"/>
+
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Estilo Customizado Modularizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: '#22C55E',
+                dark: '#0A0A0A',
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                serif: ['Space Grotesk', 'sans-serif'],
+              },
+              borderRadius: {
+                'eight': '8px',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+
+<!-- NAVEGAÇÃO -->
+<nav class="fixed top-0 w-full z-50 flex justify-end items-center px-6 md:px-12 py-8 mix-blend-difference">
+    <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium relative z-[60]">
+        <a class="hover:text-brand transition-colors" href="index.html">Início</a>
+        <a class="hover:text-brand transition-colors" href="projects.html">Projetos</a>
+        <a class="hover:text-brand transition-colors" href="about.html">Sobre</a>
+        <a class="hover:text-brand transition-colors" href="skills.html">Serviços</a>
+        <a class="hover:text-brand transition-colors" href="certificates.html">Certificados</a>
+        <a class="hover:text-brand transition-colors" href="contact.html">Contato</a>
+    </div>
+
+    <!-- Botão do menu mobile -->
+    <button class="md:hidden relative z-[60] text-white focus:outline-none" id="mobile-menu-btn">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+</nav>
+
+<!-- Overlay do Menu Mobile -->
+<div id="mobile-menu" class="fixed inset-0 bg-dark z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col gap-8 text-2xl uppercase tracking-widest font-medium text-center">
+        <a class="hover:text-brand transition-colors mobile-link" href="index.html">Início</a>
+        <a class="hover:text-brand transition-colors mobile-link" href="projects.html">Projetos</a>
+        <a class="hover:text-brand transition-colors mobile-link" href="about.html">Sobre</a>
+        <a class="hover:text-brand transition-colors mobile-link" href="skills.html">Serviços</a>
+        <a class="hover:text-brand transition-colors mobile-link" href="certificates.html">Certificados</a>
+        <a class="hover:text-brand transition-colors mobile-link" href="contact.html">Contato</a>
+        <button id="mobile-back-btn" class="hover:text-brand transition-colors text-lg uppercase tracking-widest text-gray-500 mt-8 flex items-center justify-center gap-2">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+            Voltar
+        </button>
+    </div>
+</div>
+
+<main class="min-h-screen pt-32 pb-24">
+    <section class="container mx-auto px-6">
+        <div class="mb-20">
+            <span class="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Educação & Formação</span>
+            <h1 class="serif-display text-5xl md:text-8xl uppercase leading-[0.85] mb-8 font-bold">MEUS<br/>CERTIFICADOS</h1>
+            <p class="text-gray-400 text-lg max-w-2xl leading-relaxed">Uma coleção detalhada das formações e cursos que moldaram minha trajetória como desenvolvedor.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Certificado 1: Geração Tech Full Stack (Destaque) -->
+            <a href="cert-fullstack-destaque.html" class="group bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden reveal-on-scroll hover:border-brand/50 transition-colors">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/certi5.jpeg" alt="Certificado Geração Tech Full Stack - Destaque" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-bold uppercase rounded-full">Top 10 Alunos</span>
+                        <span class="text-gray-500 text-sm">192h</span>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-2">Desenvolvedor Full Stack</h3>
+                    <p class="text-gray-400 text-sm mb-4">IEL / ADECE / Geração Tech • Fortaleza-CE</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Abril - Junho 2025</p>
+                </div>
+            </a>
+
+            <!-- Certificado 5: Geração Tech Full Stack (Conclusão) -->
+            <a href="cert-fullstack-conclusao.html" class="group bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden reveal-on-scroll hover:border-brand/50 transition-colors">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/certi1.png" alt="Certificado Conclusão Full Stack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase rounded-full">Formação</span>
+                        <span class="text-gray-500 text-sm">192h</span>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-2">Conclusão Full Stack</h3>
+                    <p class="text-gray-400 text-sm mb-4">Geração Tech • IEL / FIEC / ADECE</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Agosto 2025</p>
+                </div>
+            </a>
+
+            <!-- Certificado 4: Udemy -->
+            <a href="cert-udemy.html" class="group bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden reveal-on-scroll hover:border-brand/50 transition-colors">
+                <div class="aspect-video overflow-hidden bg-white flex items-center justify-center">
+                    <img src="img/certi2.png" alt="Certificado Udemy Dev Web" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold uppercase rounded-full">Especialização</span>
+                        <span class="text-gray-500 text-sm">120h</span>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-2">Dev Web Completo</h3>
+                    <p class="text-gray-400 text-sm mb-4">Udemy • 20 Cursos + 20 Projetos</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Julho 2025</p>
+                </div>
+            </a>
+
+            <!-- Certificado 2: Mentoria HouseJS -->
+            <a href="cert-housejs.html" class="group bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden reveal-on-scroll hover:border-brand/50 transition-colors">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/certi4.png" alt="Certificado Mentoria HouseJS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-xs font-bold uppercase rounded-full">Mentoria</span>
+                        <span class="text-gray-500 text-sm">4h</span>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-2">Comunidade HouseJS</h3>
+                    <p class="text-gray-400 text-sm mb-4">Digital College / Geração Tech 2.0</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Maio 2025</p>
+                </div>
+            </a>
+
+            <!-- Certificado 3: UI/UX Minicurso -->
+            <a href="cert-uiux.html" class="group bg-neutral-900/50 border border-gray-800 rounded-eight overflow-hidden reveal-on-scroll hover:border-brand/50 transition-colors">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/certi3.png" alt="Certificado UI/UX & Web Dev" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-bold uppercase rounded-full">Workshop</span>
+                        <span class="text-gray-500 text-sm">4h</span>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-2">UI, UX & Web Dev</h3>
+                    <p class="text-gray-400 text-sm mb-4">YouTube • Gustavo Campelo Costa</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Agosto 2025</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="bg-brand pt-20 pb-20 w-full pointer-events-none select-none overflow-hidden">
+        <div class="animate-marquee">
+            <h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+            <h2 class="serif-display text-[25vw] uppercase text-outline leading-none font-bold mr-20">GABRIEL MARQUES</h2>
+        </div>
+    </div>
+    <div class="bg-dark pt-20 pb-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 border-b border-white/20 pb-20">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.2em] mb-8 font-semibold text-brand">Conecte-se comigo</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-brand transition-colors" href="https://www.linkedin.com/in/gabriel-alex-rodrigues-marques-438351335" target="_blank">LinkedIn</a>
+                        <a class="hover:text-brand transition-colors" href="https://github.com/GabrielAlexS2" target="_blank">GitHub</a>
+                        <a class="hover:text-brand transition-colors" href="https://www.instagram.com/gabs_alex11/" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 text-sm uppercase tracking-widest font-bold">
+                    <a class="hover:text-brand transition-colors" href="projects.html">Projetos</a>
+                    <a class="hover:text-brand transition-colors" href="about.html">Sobre</a>
+                    <a class="hover:text-brand transition-colors" href="skills.html">Serviços</a>
+                    <a class="hover:text-brand transition-colors" href="certificates.html">Certificados</a>
+                    <a class="hover:text-brand transition-colors" href="contact.html">Contato</a>
+                </div>
+            </div>
+            <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm font-light text-white/80 italic text-center md:text-left">Eu transformo ideias inovadoras em realidade através de design atencioso e código significativo.</p>
+                <p class="text-sm font-medium tracking-tight text-white/80 shrink-0">Copyright © Gabriel Marques 2026</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
